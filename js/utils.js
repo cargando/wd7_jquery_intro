@@ -29,12 +29,23 @@ console.log('IMG', img2);
 // при клике на кнопку - вывести в косоль Hellow
 
 
-// const elements = $();
+const elements = $();
 
-$('#content').append($('<h1>Hello jQuery!!!</h1>'));
-$('#content').append($('<div>The .append() and .appendTo() methods perform the same task. The major difference is in the syntax-specifically, in the placement of the content and target. With .append(), the selector expression preceding the method is the container into which the content is inserted. With .appendTo(), </div>'));
-$('#content').append($('<button>Hello</button>'))
+elements
+  .add('<h1>Hello jQuery!!! ----- </h1>')
+  .add('<div>The .append() and .appendTo() methods perform the same task. The major difference is in the syntax-specifically, in the placement of the content and target. With .append(), the selector expression preceding the method is the container into which the content is inserted. With .appendTo(), </div>')
+  .add('<button>Some</button>')
+  .appendTo( "body" );
 
-$('#content').find('div').append($('<img>', {src: '/img/kitty.png'}).addClass('kitty'));
-$('#content').find('div').append($('<p>Какой-то интересный текст про котиков</p>'));
-$('#content').find('button').click(() => console.log('Hellow'));
+
+// $('#content').append($('<h1>Hello jQuery!!!</h1>'));
+// $('#content').append($('<div>The .append() and .appendTo() methods perform the same task. The major difference is in the syntax-specifically, in the placement of the content and target. With .append(), the selector expression preceding the method is the container into which the content is inserted. With .appendTo(), </div>'));
+// $('#content').append($('<button></button>', {
+//   type: 'button',
+//   text: 'Hello',
+//   click: () => console.log('Hellow')
+// }))
+//
+// $('#content').find('div').append($('<img>', {src: '/img/kitty.png'}).addClass('kitty'));
+// $('#content').find('div').append($('<p>Какой-то интересный текст про котиков</p>'));
+// $('#content').find('button').click(() => console.log('Hellow'));
