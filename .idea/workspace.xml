@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4c588b9c-eb4e-4a9c-82c4-5f26cc7b365f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/wd7_jquery_intro.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="ProjectId" id="1fjO68QIONCFl8fLydW42teb0dM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="images" />
+    <option name="LAST_COMMIT_MESSAGE" value="images" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2278" y="30" key="CommitChangelistDialog2" timestamp="1596878389461">
+      <screen x="1792" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2278" y="30" key="CommitChangelistDialog2/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1596878389461" />
+    <state x="744" y="447" key="Github.ShareDialog" timestamp="1596740296788">
+      <screen x="0" y="23" width="1792" height="1031" />
+    </state>
+    <state x="744" y="447" key="Github.ShareDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1596740296788" />
+    <state x="649" y="171" key="Github.UntrackedFilesDialog" timestamp="1596740304676">
+      <screen x="0" y="23" width="1792" height="1031" />
+    </state>
+    <state x="649" y="171" key="Github.UntrackedFilesDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1596740304676" />
+    <state x="2305" y="274" key="Vcs.Push.Dialog.v2" timestamp="1596878391277">
+      <screen x="1792" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2305" y="274" key="Vcs.Push.Dialog.v2/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1596878391277" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1596732191117">
+      <screen x="0" y="23" width="1792" height="1031" />
+    </state>
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.23.1792.1031@0.23.1792.1031" timestamp="1596732191117" />
+  </component>
+</project>

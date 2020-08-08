@@ -34,12 +34,54 @@
 		<footer class="superFooter">&copy;FOTER 2:: copyright 2012</footer>
 	  <!-- ВОТ СЮДА ВСТАВИТСЯ КАРТИНКА ЧЕРЕЗ JQUERY на строке 161 (см ниже) -->
 	</div>
+	<hr>
+
+	<div class="images-ex1">
+		<img src="/img/kitty1.jpg" alt="кошка" title="кошка" data-id="500">
+		<img src="/img/kitty2.jpg" alt="кошка" data-id="501">
+		<img src="/img/kitty3.jpg" alt="кошка" title="кошка" data-id="505">
+		<br><br>
+		<img src="/img/dog1.jpg" alt="собака" data-id="510">
+		<img src="/img/dog2.jpg" alt="собака" data-id="520">
+		<img src="/img/dog3.jpg" alt="собака" data-id="530">
+		<br><br>
+		<img src="/img/parrot1.jpg" alt="попугай" data-id="523">
+		<img src="/img/parrot2.jpg" alt="попугай" data-id="525">
+		<img src="/img/parrot3.jpg" alt="попугай" data-id="535">
+
+	</div>
+	<hr>
+
+	<div class="images-ex2">
+		<p>Культурная жизнь возвращается, <i>так что в августе мы отправляемся не только в парки на пикники</i>, но еще в кинотеатры, театры и на концерты</p>
+		<br>
+		<span>Some text</span>
+		<p>Фестиваль документального кино о <u id="underlinedText">новой культуре ежегодно обещает программу, в которой интересное</u> для себя найдет каждый, и своего слова пока не нарушил ни разу. Диапазон тем широк. Здесь и музыка (с которой, кстати, Beat Film Festival как раз начинался), и программа, емко озаглавленная «Наперекор», чьи герои бросают вызов времени, людям и обстоятельствам, и современное искусство (в центре внимания — загадочный Бэнкси), и мода, и литература, и много чего еще.</p>
+		<br>
+		<span>Some other text</span>
+		<p>Странным летом этого года кинотеатр <b>«Гаража» открывает сезон значительно позже, чем привык</b>. Любители фестивального кино успели по нему истосковаться, чего и не скрывают. Расписание Garage Screen заслуживает самого пристального изучения. Среди премьер — работа Пьетро Марчелло «Мартин Иден», в которой местом действия взятого за основу сюжета романа Джека Лондона оказывается итальянский Неаполь.</p>
+		sdfsdfsdfsdf
+	</div>
+	<hr>
+	<ul class="listOfQ">
+		<li class="s1">Странным летом этого года кинотеатр</li>
+		<li>«Гаража» открывает сезон значительно позже</li>
+		<li >чем привык</li>
+		<li>Любители фестивального кино успели</li>
+		<li>по нему истосковаться</li>
+		<li class="s1">Фестиваль документального кино</li>
+		<li>новой культуре ежегодно обещает</li>
+		<li id="someLiID">в которой интересное</li>
+		<li class="s1">Культурная жизнь возвращается</li>
+
+	</ul>
 
 <script>
 
 	$('.superFooter')
 		.addClass('super-red')
 		.addClass('decorate');
+
 
 
 	// document.querySelector('.superFooter').classList.add('super-red');
@@ -136,9 +178,93 @@ console.log("Find children size = ", allH2.length); // длинна массив
 	// потом внутри этой таблицы ищем уже картинки img с атрибутом title
 
 
+	$('.images-ex1 img').css('width', '200px');
+
+  // $('.images-ex1 img[alt="кошка"]').add('img[alt="попугай"]').css('border', '5px solid green');
+	// $('img[alt="кошка"]', '.images-ex1').add('img[alt="попугай"]', '.images-ex1').css('border', '5px solid red');
+
+	// $(...).not(...) убирает из ранее полученной выборки то, что ему передано в качестве селектора (параметр метода)
+	// $('img[alt]', '.images-ex1').not('img[alt="попугай"]').css('border', '5px solid pink');
+
+	// $(...).filter(...) - фильтрует содиержимое выборки
+  // $('.images-ex1 img').filter('img[alt="попугай"]').css('border', '5px solid green');
+  // $('.images-ex1 img').filter(function () {
+  //   // функция фильтрации должна вернуть true/false - если тру, тогда элемент остается в выборке,
+	// 	// если фолз тогда элемент удаляется из выборки
+	// 	return $(this).is('img[alt="попугай"]');
+	//
+	// }).css('border', '5px solid red');
+
+  // $(...).slice(begin, end) - делает копию из выборки, ограничивая begin - начало и end - конец
+	// begin, end - индексы в массиве (от 0)
+	// end - необязательный параметр, если не указан, тогда копируется до конца
+
+  // $('.images-ex1 img').slice(3, 6).css('border', '5px solid green');
+
+  // $(...).has(...) - найдет детей удовлетворяющих селектору внутри has, который (дети) находятся в родителе из
+	// ранее полученной выборки
+
+	// $('.images-ex2 p').has('i').css('color', 'green');
+	const pWithI = $('.images-ex2 p').has('i');
+  pWithI.css('color', 'green');
+	// почти такой поиск $('.images-ex2 p i').css('color', 'green'), только тут будет найден сам по себе тег <i> внутри параграфа
+	// а если юзать .has('i'), то мы получаем доступ к родителю, т.е. к параграфу, внтри котороего есть <i>
+
+	// $(...).map(...) - делает обход и создает копию выборки, копия состоит из того, что вернет колбэк, который
+	// мы перердаем на вход map()
+  $('.images-ex1 img').map(function (index, item) {
+    console.log('searching', index, item);
+    return this.title ? this : null
+	}).css('border', '5px solid violet');
+
+  // $(...).each(...) - делает тоже самое что и map, только не создает массив с результатами колбэка
+	const imageDataID = [];
+  $('.images-ex1 img').each((index, item) => {
+    imageDataID.push(item.getAttribute('data-id'));
+	});
+
+  console.log('Все data-id для картинок:', imageDataID)
 
 
 
+	/// Получение набора из ранее сделанной выборки, на основе взаимоотношения
+	// find() - ищет детей, которые удовлетворяют условию селектора, из ранее сделанной выборки
+
+  // $('.images-ex2').find('p b').css('color', 'violet');
+
+  // closest() - ищет родителя, который удовлетворяет условию поиска
+
+	// $('#underlinedText').closest('p').css('color', 'yellow');
+
+
+	// children() - ищет среди детей, которые удовлетворяет условию поиска
+
+  // $('.images-ex2').children('p').css('color', 'violet');
+
+  /// contents() - получает доступ к текстовому содержимому узлов
+
+  // const allPcontent = [];
+  // $('.images-ex2').contents().css('color', 'violet');
+
+	// $().next() - получить доступ к следующему элементу, который(ые) идут за элементами из выборки
+
+	// $('.listOfQ li:eq(2)').next().css('color', 'violet');
+
+  // $().nextAll() - получить доступ ко всем следующим элементам, которые идут за элементом из выборки
+
+  // $('.listOfQ li:eq(2)').nextAll().css('color', 'violet');
+
+  // $().nextUntil('селектор') - получить доступ ко всем следующим элементам, которые идут за элементом из выборки
+
+  //$('.listOfQ li:eq(2)').nextUntil('#someLiID').css('color', 'green');
+
+  // prev(), prevAll(), prevUntil() - все тоже самое, что и выше, только в обратном смысле - т.е. ищет предыдущие элементы (соседи)
+
+	// siblings('условие_селектор') - ищет все соседние элементы, которые находятся на одном уровне
+
+  // $('.listOfQ li:eq(2)').siblings('[class]').css('color', 'green');
+
+	
 </script>
 
 <script src="/js/utils.js"></script>
