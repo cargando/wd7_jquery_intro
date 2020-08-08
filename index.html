@@ -76,6 +76,29 @@
 
 	</ul>
 
+	<hr>
+	<div class="example5">
+		<h1>Фестиваль документального кино</h1>
+		<h1>Странным летом этого года кинотеатр</h1>
+		<h2>Культурная жизнь возвращается</h2>
+		<h2>Любители фестивального кино успели</h2>
+		<h3>Культурная жизнь возвращается</h3>
+		<h3>новой культуре ежегодно обещает программ</h3>
+
+
+	</div>
+
+	<hr>
+
+	<div class="example6">
+		<h3>Фестиваль документального кино</h3>
+		<h3 class="zzz">Странным летом этого года кинотеатр</h3>
+		<h3>Культурная жизнь возвращается</h3>
+		<h3>Любители фестивального кино успели</h3>
+		<h3 class="ccc">Культурная жизнь возвращается</h3>
+		<h3>новой культуре ежегодно обещает программ</h3>
+	</div>
+
 <script>
 
 	$('.superFooter')
@@ -264,7 +287,47 @@ console.log("Find children size = ", allH2.length); // длинна массив
 
   // $('.listOfQ li:eq(2)').siblings('[class]').css('color', 'green');
 
-	
+	// $(...).text() - возвращает текстовое содержимое элементов выборки
+	// $(...).html() - установить текстовое значение элемента
+
+
+	// ЗАДАЧА
+	// создать в html 6 заголовков: 1 первого ур, 2 второго ур, 2 третьего ур
+	// вставить в них любой текст
+	// для заголовков 1го уровня через $ в конец добавить воскл знак
+	// для 2го уровня поменять цвет на зеленый
+	// для 3го уровня сделать подчеркнутый
+
+		$('.example5').find(':header').each((index, item) => {
+			if ($(item).is('h1')) {
+			  const text = $(item).text();
+        $(item).html(`${ text }!`)
+			} else if ($(item).is('h2')) {
+        $(item).css('color', 'green'); // .css('text-decoration', 'underline');
+        // $(item).css({color: 'green', textDecoration: 'underline' });
+			} else if ($(item).is('h3')) {
+        $(item).css({textDecoration: 'underline' });
+			}
+		});
+		// $('.example5:header').find(':header')
+
+  $('.example5 h1').each((index, item) => {
+      const text = $(item).text();
+      $(item).html(`${ text }!`)
+  })
+
+
+	////// ЗАДАЧА
+	// 1) нужно выбрать все заголовки кроме тех, у которых есть css-классы zzz и ccc, далее покрасить их в красный цвет
+	// 2) обратиться к заголовку с классом zzz и затем обратиться к его родителю и у него сделать
+	// рамку пунктиром синим цветом + добавить паддинг 20px
+
+	console.log("ALL HEADERS", $('.example6 :header'))
+	$('.example6 :header').not('.ccc,.zzz').css('color', 'green');
+	// $('.example6 :header:not(.ccc,.zzz)').css('color', 'green');
+
+	$('.example6 .zzz').parent().css({padding: '20px', border: '2px dashed blue'});
+
 </script>
 
 <script src="/js/utils.js"></script>
