@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8"/>
 	<title>Page Title</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="profile" href="http://gmpg.org/xfn/11"/>
 	<link rel="stylesheet" href="/css/styles.css">
 
@@ -10,6 +11,11 @@
 
 </head>
 <body>
+
+	<div class="goToTop">
+		<i class="fas fa-arrow-alt-circle-up"></i>
+	</div>
+
 	<div id="content" class="wrapper box">
 		<hgroup>
 			<h1>Page Title</h1>
@@ -92,11 +98,32 @@
 
 	<div class="example6">
 		<h3>Фестиваль документального кино</h3>
-		<h3 class="zzz">Странным летом этого года кинотеатр</h3>
+		<h3 class="zzz" data-id="secret value">Странным летом этого года кинотеатр</h3>
 		<h3>Культурная жизнь возвращается</h3>
 		<h3>Любители фестивального кино успели</h3>
 		<h3 class="ccc">Культурная жизнь возвращается</h3>
 		<h3>новой культуре ежегодно обещает программ</h3>
+	</div>
+
+
+	<ul class="markNumbers">
+		<li>Durations are given in milliseconds</li>
+		<li>higher values indicate slower animations</li>
+		<li>not faster ones</li>
+		<li>The default duration is 400</li>
+		<li>The strings 'fast' and 'slow'</li>
+		<li>can be supplied to indicate durations </li>
+		<li>of 200 and 600 milliseconds</li>
+	</ul>
+
+
+	<div class="wrapEx">
+		<span>Фестиваль документального кино</span>
+		<span class="zzz" data-id="secret value">Странным летом этого года кинотеатр</span>
+		<span>Культурная жизнь возвращается</span>
+		<span>Любители фестивального кино успели</span>
+		<span class="ccc">Культурная жизнь возвращается</span>
+		<span>новой культуре ежегодно обещает программ</span>
 	</div>
 
 <script>
@@ -105,9 +132,22 @@
 		.addClass('super-red')
 		.addClass('decorate');
 
+  initBackToTopScroller();
 
 
-	// document.querySelector('.superFooter').classList.add('super-red');
+  function initBackToTopScroller() {
+
+    $('.goToTop').on('click', function (e){
+
+      $('html, body').animate({scrollTop: 0}, 'fast');
+
+    });
+
+  }
+
+
+
+  // document.querySelector('.superFooter').classList.add('super-red');
 	// document.querySelectorAll('.superFooter').classList.add('super-red');
   // IE = classList
 	// Safari = classes
@@ -298,23 +338,36 @@ console.log("Find children size = ", allH2.length); // длинна массив
 	// для 2го уровня поменять цвет на зеленый
 	// для 3го уровня сделать подчеркнутый
 
-		$('.example5').find(':header').each((index, item) => {
-			if ($(item).is('h1')) {
-			  const text = $(item).text();
-        $(item).html(`${ text }!`)
-			} else if ($(item).is('h2')) {
-        $(item).css('color', 'green'); // .css('text-decoration', 'underline');
-        // $(item).css({color: 'green', textDecoration: 'underline' });
-			} else if ($(item).is('h3')) {
-        $(item).css({textDecoration: 'underline' });
-			}
-		});
-		// $('.example5:header').find(':header')
+		// $('.example5').find(':header').each((index, item) => {
+		// 	if ($(item).is('h1')) {
+		// 	  const text = $(item).text();
+    //     $(item).html(`${ text }!`)
+		// 	} else if ($(item).is('h2')) {
+    //     $(item).css('color', 'green'); // .css('text-decoration', 'underline');
+    //     // $(item).css({color: 'green', textDecoration: 'underline' });
+		// 	} else if ($(item).is('h3')) {
+    //     $(item).css({textDecoration: 'underline' });
+		// 	}
+		// });
 
-  $('.example5 h1').each((index, item) => {
-      const text = $(item).text();
-      $(item).html(`${ text }!`)
-  })
+		const h11 = $('.example5')
+			.find(':header')
+			.filter('h1')
+			.css('color', 'green')
+			.end()
+			.filter('h2')
+      .css('color', 'yellow')
+      .end()
+      .filter('h3')
+      .css('text-decoration', 'underline')
+
+
+  console.log('h1: ', h11);
+
+  // $('.example5 h1').each((index, item) => {
+  //     const text = $(item).text();
+  //     $(item).html(`${ text }!`)
+  // })
 
 
 	////// ЗАДАЧА
@@ -327,6 +380,53 @@ console.log("Find children size = ", allH2.length); // длинна массив
 	// $('.example6 :header:not(.ccc,.zzz)').css('color', 'green');
 
 	$('.example6 .zzz').parent().css({padding: '20px', border: '2px dashed blue'});
+
+
+	//////// $(...).attr() = element.getAttribute() - получить значение атрибута элемента(ов)
+
+	// $(...).attr() - вызов без параметров -> считать значение атрибута
+	const attributeVal = $('.example6 .zzz').attr('data-id');
+	console.log("Значение атрибута: ", attributeVal)
+
+  // $(...).attr(name, value) - вызов с двумя параметрами -> установить значение для какого-то атрибута
+  const last= $('.example6 :last').attr('data-param', '100500');
+
+  // $(...).attr( { __object__ } ) - установить список атрибутов одним махом
+
+	$($('.example6 :header').get(3)).attr({ 'data-super-param': '100500', id: 'dataSuperParam', name: 'data-super-param' });
+  // console.log("Значение атрибута: ", $('.example6 :header').get(3))
+
+
+	///// removeAttr(_name_) - удалить атрибут
+
+
+
+	//////// ЗАДАЧА
+	/// Пробежаться по всему списку UL->LI и добавить порядковый номер пункта из списка
+	/// порядковый номер в виде текста, например: 1) и далее текст из пункта списка
+
+	// $('.markNumbers li').each((index, item) => {
+	// 	$(item).html(`${ index + 1 }) ${ item.innerText }`);
+	// });
+
+	$('.markNumbers li').each(function (index) {
+		// $(this).html(`${ index + 1 }) ${ this.innerText }`);
+		this.innerText = `${ index + 1 }) ${ this.innerText }`;
+	});
+
+
+	//////// $(...).wrap(); - обернуть выборку в нужный html-тег
+
+	$('.wrapEx span').wrap('<div></div>');
+
+	/////// $(...).unwrap(); - удалить тег (тег-обертку), который оборачивает текущий из выборки
+
+  $('.wrapEx > div > span').unwrap();
+
+  ///////// $(...).before('текст') - добавить элемент ДО выборки
+  ///////// $(...).after('текст') - добавить элемент ПОСЛЕ выборки
+
+
 
 </script>
 

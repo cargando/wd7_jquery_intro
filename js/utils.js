@@ -49,3 +49,5 @@ elements
 // $('#content').find('div').append($('<img>', {src: '/img/kitty.png'}).addClass('kitty'));
 // $('#content').find('div').append($('<p>Какой-то интересный текст про котиков</p>'));
 // $('#content').find('button').click(() => console.log('Hellow'));
+
+

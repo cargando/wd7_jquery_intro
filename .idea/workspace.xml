@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c588b9c-eb4e-4a9c-82c4-5f26cc7b365f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/wd7_jquery_intro.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4c588b9c-eb4e-4a9c-82c4-5f26cc7b365f" name="Default Changelist" comment="images">
+      <change afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,10 +47,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="images" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2278" y="30" key="CommitChangelistDialog2" timestamp="1596878389461">
+    <state x="2278" y="30" key="CommitChangelistDialog2" timestamp="1596888363862">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
-    <state x="2278" y="30" key="CommitChangelistDialog2/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1596878389461" />
+    <state x="2278" y="30" key="CommitChangelistDialog2/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1596888363862" />
     <state x="744" y="447" key="Github.ShareDialog" timestamp="1596740296788">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
@@ -58,10 +59,10 @@
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
     <state x="649" y="171" key="Github.UntrackedFilesDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1596740304676" />
-    <state x="2305" y="274" key="Vcs.Push.Dialog.v2" timestamp="1596878391277">
+    <state x="2305" y="274" key="Vcs.Push.Dialog.v2" timestamp="1596888365665">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
-    <state x="2305" y="274" key="Vcs.Push.Dialog.v2/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1596878391277" />
+    <state x="2305" y="274" key="Vcs.Push.Dialog.v2/1792.23.1920.1057/0.23.1792.1031@1792.23.1920.1057" timestamp="1596888365665" />
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1596732191117">
       <screen x="0" y="23" width="1792" height="1031" />
     </state>
