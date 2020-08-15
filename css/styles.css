@@ -36,3 +36,28 @@ h1,h2 {
 	opacity: 0.5;
 	cursor: pointer;
 }
+
+.bgcolor1{
+	background-color: #efefef;
+}
+
+.colT {
+	background-color: #efefef;
+	border: 1px solid #afafaf;
+	margin: 40px;
+	padding: 20px;
+}
+
+.checkboxContainer{
+	margin: 100px;
+}
+
+.green__header {
+	color: greenyellow;
+	text-decoration: underline;
+}
+
+.blue__header {
+	color: dodgerblue;
+	text-decoration: underline;
+}
