@@ -4,6 +4,7 @@
     imgWidth: 400,
     imgPadding: 30,
     containerWidth: '80%',
+    containerHeight: '400px',
     activeImage: 0,
   }
 
@@ -16,7 +17,7 @@
 
   $.fn.myCarousel = function (imageList = [], config = defaultConfig) {
 
-    console.log('Params', this);
+    console.log('Params', this); // this указывает на элемент выборки
 
     const root = this.addClass('carousel');
 
